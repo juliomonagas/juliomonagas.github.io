@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Montserrat:400,600,700" rel="stylesheet">
 
@@ -23,17 +24,17 @@
   <body>
     <header>
       <div class="right-container">
-        <h1>
+        <h1 class="animated fadeInUp">
           Hello, I'm
           Julio Monagas.
         </h1>
-        <h2>
+        <h2 class="animated fadeInUp">
           UX/UI Designer & Frontend Developer based in Maracaibo, Venezuela
         </h2>
         <div class="button-container">
           <a href="#" class="button-1">Check Portfolio</a>
         </div>
-        <ul class="social-list">
+        <ul class="social-list animated fadeInUp">
           <li>
             <a href="https://www.linkedin.com/in/julio-monagas-751307117/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
           </li>
@@ -54,7 +55,7 @@
     </header>
     <section class="about">
       <div class="container-fluid section-content">
-        <h1 class="title-section">About me.</h1>
+        <h1 class="title-section animated fadeInUp">About me.</h1>
         <div class="col-xs-12 col-md-6 no-padd-left">
           <div class="container-fluid no-padd">
             <p>
@@ -191,7 +192,7 @@
               <textarea class="form-control textarea-contact" rows="5" id="comment" placeholder="*Your Subject"></textarea>
             </div>
             <div class="button-container">
-              <a href="mailto:juliomonagaslunari@gmail.com" type="submit" class="button-1">Send Message</a>
+              <a href="mailto:juliomonagaslunari@gmail.com" type="submit" class="button-1" id="send-info">Send Message</a>
             </div>
           </form>
         </div>
@@ -229,5 +230,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('#send-info').click(function(e){
+          e.preventDefault();
+          var name = $('#name').val();
+          var email = $('#email').val();
+          var msg = $('#comment').val();
+
+          console.log("<a href='mailto:"+email+"&body="+msg+"'></a>");
+          window.location.href = "mailto:"+email+"&body="+msg;
+        });
+      });
+    </script>
+
   </body>
 </html>
