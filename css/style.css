@@ -128,7 +128,10 @@ footer ul.social-list li i:hover { color: white; }
   section.contact { padding: 5vw !important; height: 100% !important; }
   section.contact h1.title-section { margin-top: 50px !important; font-size: 6rem !important; text-align: center !important; }
   section.contact .input-contact { max-width: 100vw !important; }
-  section.contact .textarea-contact { max-width: 100vw !important; } }
+  section.contact .textarea-contact { max-width: 100vw !important; }
+  footer { flex-direction: column !important; height: 100% !important; padding: 3vw; }
+  footer p.footer-copyright { width: 100% !important; text-align: center !important; }
+  footer ul.social-list { width: 100% !important; justify-content: center !important; } }
 
 @media screen and (max-width: 442px) { header { padding: 5vw !important; }
   header .right-container { width: 100% !important; justify-content: center !important; }
@@ -149,6 +152,6 @@ footer ul.social-list li i:hover { color: white; }
   section.contact .input-contact { max-width: 100vw !important; }
   section.contact .textarea-contact { max-width: 100vw !important; }
   section.contact p.contact-text { font-size: 1.6rem !important; }
-  footer { height: 100% !important; padding: 3vw; }
+  footer { flex-direction: column !important; height: 100% !important; padding: 3vw; }
   footer p.footer-copyright { width: 100% !important; text-align: center !important; }
   footer ul.social-list { width: 100% !important; justify-content: center !important; } }
