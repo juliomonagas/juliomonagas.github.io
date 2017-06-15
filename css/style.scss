@@ -198,6 +198,10 @@ body {
 }
 header {
   background-color: #f2f2f2;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // background-image: url('../img/bg-header.jpg');
   width: 100%;
   height: 100vh;
   padding: 2vw;
@@ -261,7 +265,7 @@ header {
         -webkit-font-smoothing: antialiased;
         transition: all ease-in-out 300ms;
         &:hover {
-          background-color: darkred;
+          background-color: purple;
           text-decoration: none !important;
         }
       }
@@ -323,5 +327,77 @@ section.about {
     text-align: left;
     font-weight: 400;
     margin-bottom: 25px;
+  }
+}
+section.portfolio {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: block;
+  .grid-container {
+    width: 100%;
+    height: 100%;
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    @include align-items(flex-start);
+    @include flex-wrap(wrap);
+    .project-container {
+      width: 25%;
+      height: 50vh;
+      @include flexbox;
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #707070;
+      // background-image: url('../img/bg-header.jpg');
+      transition: all ease-in-out 300ms;
+      &:hover {
+        .project-info {
+          opacity: 1;
+          h3.project-title {
+            opacity: 1;
+          }
+          h4.project-client {
+            opacity: 1;
+          }
+        }
+      }
+      .project-info {
+        width: 100%;
+        height: 100%;
+        background-color: transparentize(#333, 0.2);
+        @include flexbox;
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include align-items(center);
+        opacity: 0;
+        transition: all ease-in-out 300ms;
+        h3.project-title {
+          font-family: $body-font;
+          color: #FFF;
+          font-size: 2.2rem;
+          text-align: center;
+          font-weight: 300;
+          margin-bottom: 20px;
+          opacity: 0;
+          transition: all ease-in-out 400ms;
+        }
+        h4.project-client {
+          font-family: $title-font;
+          color: #FFF;
+          font-size: 1.8rem;
+          text-align: center;
+          font-weight: 600;
+          opacity: 0;
+          transition: all ease-in-out 400ms;
+          padding: 10px;
+          border: solid 2px #FFF;
+        }
+      }
+    }
   }
 }
