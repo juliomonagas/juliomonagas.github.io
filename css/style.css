@@ -114,7 +114,7 @@ footer ul.social-list li i:hover { color: white; }
   header .right-container h1 { text-align: center !important; font-size: 9rem !important; width: 100% !important; margin-bottom: 3vw !important; }
   header .right-container h2 { text-align: center !important; width: 100% !important; margin-bottom: 3vw !important; font-size: 4rem !important; }
   header .right-container .button-container { justify-content: center !important; }
-  header .right-container .button-container .button-1 { height: 60px !important; font-size: 2rem !important; max-width: 300px !important; }
+  header .right-container .button-container .button-1 { height: 50px !important; font-size: 1.8rem !important; max-width: 250px !important; }
   header .right-container ul.social-list { justify-content: center !important; }
   header .right-container ul.social-list li { margin-right: 20px !important; }
   header .right-container ul.social-list li i { font-size: 3rem !important; }
