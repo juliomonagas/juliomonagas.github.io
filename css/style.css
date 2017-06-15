@@ -55,7 +55,7 @@ section.portfolio { background-color: white; width: 100%; height: 100%; position
 
 section.portfolio .grid-container { width: 100%; height: 100%; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-direction: row; -moz-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-justify-content: flex-start; -moz-justify-content: flex-start; -ms-justify-content: flex-start; justify-content: flex-start; -ms-flex-pack: flex-start; -webkit-align-items: flex-start; -moz-align-items: flex-start; -ms-align-items: flex-start; align-items: flex-start; -webkit-flex-wrap: wrap; -moz-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-section.portfolio .grid-container .project-container { width: 25%; height: 45vh; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-direction: column; -moz-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; background-size: cover; background-repeat: no-repeat; background-color: #707070; transition: all ease-in-out 300ms; }
+section.portfolio .grid-container .project-container { width: 25%; height: 45vh; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-direction: column; -moz-flex-direction: column; -ms-flex-direction: column; flex-direction: column; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; -ms-flex-pack: center; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; background-size: cover; background-position: top; background-repeat: no-repeat; background-color: #707070; transition: all ease-in-out 300ms; }
 
 section.portfolio .grid-container .project-container:hover .project-info { opacity: 1; }
 
@@ -79,13 +79,13 @@ section.contact .input-contact { padding: 15px; height: 40px; width: 100%; max-w
 
 section.contact .input-contact:focus { outline: none !important; box-shadow: 0px 4px 8px 0px lightgrey; font-weight: 400; }
 
-section.contact .input-contact::placeholder { color: #707070; font-size: 1.7rem; font-weight: 400; font-family: "Montserrat", sans-serif; }
+section.contact .input-contact::placeholder { color: darkgrey; font-size: 1.7rem; font-weight: 400; font-family: "Montserrat", sans-serif; }
 
 section.contact .textarea-contact { padding: 15px; width: 100%; max-width: 40vw; margin: 1vw auto; border: none !important; background-color: #FFF; border-radius: 0 !important; color: #333; font-family: "Montserrat", sans-serif; font-weight: 400; font-size: 1.7rem; box-shadow: 0px 2px 6px 0px lightgrey; transition: all ease-in-out 300ms; }
 
 section.contact .textarea-contact:focus { box-shadow: 0px 4px 8px 0px lightgrey; outline: none !important; }
 
-section.contact .textarea-contact::placeholder { color: #707070; font-size: 1.7rem; font-weight: 400; font-family: "Montserrat", sans-serif; }
+section.contact .textarea-contact::placeholder { color: darkgrey; font-size: 1.7rem; font-weight: 400; font-family: "Montserrat", sans-serif; }
 
 section.contact .button-container { width: 100%; height: 90px; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; -webkit-flex-direction: row; -moz-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-justify-content: flex-start; -moz-justify-content: flex-start; -ms-justify-content: flex-start; justify-content: flex-start; -ms-flex-pack: flex-start; -webkit-align-items: center; -moz-align-items: center; -ms-align-items: center; align-items: center; }
 

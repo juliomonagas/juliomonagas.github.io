@@ -395,6 +395,7 @@ section.portfolio {
       @include justify-content(center);
       @include align-items(center);
       background-size: cover;
+      background-position: top;
       background-repeat: no-repeat;
       background-color: #707070;
       // background-image: url('../img/bg-header.jpg');
@@ -497,7 +498,7 @@ section.contact {
     }
   }
   .input-contact::placeholder {
-    color: #707070;
+    color: darkgrey;
     font-size: 1.7rem;
     font-weight: 400;
     font-family: $title-font;
@@ -525,7 +526,7 @@ section.contact {
     }
   }
   .textarea-contact::placeholder {
-    color: #707070;
+    color: darkgrey;
     font-size: 1.7rem;
     font-weight: 400;
     font-family: $title-font;
