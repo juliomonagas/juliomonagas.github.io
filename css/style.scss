@@ -536,6 +536,79 @@ section.contact {
       justify-content: center !important;
       h1 {
         text-align: center !important;
+        font-size: 9rem !important;
+        width: 100% !important;
+        margin-bottom: 3vw !important;
+      }
+      h2 {
+        text-align: center !important;
+        width: 100% !important;
+        margin-bottom: 3vw !important;
+        font-size: 4rem !important;
+      }
+      .button-container {
+        justify-content: center !important;
+        .button-1 {
+          height: 60px !important;
+          font-size: 2rem !important;
+          max-width: 300px !important;
+        }
+      }
+      ul.social-list {
+        justify-content: center !important;
+        li {
+          margin-right: 20px !important;
+          i {
+            font-size: 3rem !important;
+          }
+        }
+      }
+    }
+  }
+  section.about {
+    padding: 5vw !important;
+    h1.title-section {
+      margin-top: 50px !important;
+      font-size: 6rem !important;
+      text-align: center !important;
+    }
+    p {
+      margin-bottom: 20px !important;
+    }
+  }
+  section.portfolio {
+    height: 100% !important;
+    .grid-container {
+      .project-container {
+        width: 50% !important;
+        height: 40vh !important;
+      }
+    }
+  }
+  section.contact {
+    padding: 5vw !important;
+    height: 100% !important;
+    h1.title-section {
+      margin-top: 50px !important;
+      font-size: 6rem !important;
+      text-align: center !important;
+    }
+    .input-contact {
+      max-width: 100vw !important;
+    }
+    .textarea-contact {
+      max-width: 100vw !important;
+    }
+  }
+}
+@media screen and (max-width: 442px) {
+  header {
+    padding: 5vw !important;
+    .right-container {
+      width: 100% !important;
+      justify-content: center !important;
+      h1 {
+        text-align: center !important;
         font-size: 5rem !important;
         width: 100% !important;
         margin-bottom: 3vw !important;
@@ -563,6 +636,9 @@ section.contact {
       margin-top: 50px !important;
       font-size: 4rem !important;
       text-align: center !important;
+    }
+    p {
+      margin-bottom: 20px !important;
     }
   }
   section.portfolio {
