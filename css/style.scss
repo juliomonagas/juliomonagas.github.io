@@ -6,9 +6,6 @@ $body-color: #333333;
 $bg-color: #f2f2f2;
 $title-size: 1.8rem;
 
-
-
-
 //Mixins
 @mixin transition($args) {
   -webkit-transition: $args;
@@ -266,7 +263,7 @@ header {
         -webkit-font-smoothing: antialiased;
         transition: all ease-in-out 300ms;
         &:hover {
-          background-color: purple;
+          background-color: green;
           text-decoration: none !important;
         }
       }
@@ -289,7 +286,7 @@ header {
           transition: all ease-in-out 300ms;
           -webkit-font-smoothing: antialiased;
           &:hover {
-            color: darkred;
+            color: green;
           }
         }
       }
@@ -317,7 +314,7 @@ section.about {
     font-family: $title-font;
     font-size: 6rem;
     margin-top: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     -webkit-font-smoothing: antialiased;
   }
   p {
@@ -328,6 +325,28 @@ section.about {
     text-align: left;
     font-weight: 400;
     margin-bottom: 25px;
+  }
+  .progress-bar-behind {
+    height: 6px;
+    width: 100%;
+    background-color: #707070;
+    display: block;
+  }
+  .progress-bar-front {
+    height: 6px;
+    // width: 80%;
+    background-color: green;
+    display: block;
+    margin-top: -6px;
+  }
+  p.progress-bar-title {
+    font-family: $title-font;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: left;
+    color: #333;
+    text-transform: uppercase;
+    margin-top: 10px;
   }
 }
 section.portfolio {
@@ -370,7 +389,7 @@ section.portfolio {
       .project-info {
         width: 100%;
         height: 100%;
-        background-color: transparentize(#333, 0.1);
+        background-color: transparentize(green, 0.1);
         @include flexbox;
         @include flex-direction(column);
         @include justify-content(center);
@@ -443,7 +462,7 @@ section.contact {
     &:focus {
       outline: none !important;
       box-shadow: none !important;
-      border: solid 2px #333;
+      border: solid 2px green;
       font-weight: 400;
     }
   }
@@ -467,7 +486,7 @@ section.contact {
     &:focus {
       outline: none !important;
       box-shadow: none !important;
-      border: solid 2px #333;
+      border: solid 2px green;
     }
   }
   .textarea-contact::placeholder {
@@ -503,9 +522,69 @@ section.contact {
       -webkit-font-smoothing: antialiased;
       transition: all ease-in-out 300ms;
       &:hover {
-        background-color: purple;
+        background-color: green;
         text-decoration: none !important;
       }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  header {
+    padding: 5vw !important;
+    .right-container {
+      width: 100% !important;
+      justify-content: center !important;
+      h1 {
+        text-align: center !important;
+        font-size: 5rem !important;
+        width: 100% !important;
+        margin-bottom: 3vw !important;
+      }
+      h2 {
+        text-align: center !important;
+        width: 100% !important;
+        margin-bottom: 3vw !important;
+        font-size: 2rem !important;
+      }
+      .button-container {
+        justify-content: center !important;
+      }
+      ul.social-list {
+        justify-content: center !important;
+        li {
+          margin-right: 20px !important;
+        }
+      }
+    }
+  }
+  section.about {
+    padding: 5vw !important;
+    h1.title-section {
+      margin-top: 50px !important;
+      font-size: 4rem !important;
+      text-align: center !important;
+    }
+  }
+  section.portfolio {
+    height: 100% !important;
+    .grid-container {
+      .project-container {
+        width: 100% !important;
+      }
+    }
+  }
+  section.contact {
+    padding: 5vw !important;
+    h1.title-section {
+      margin-top: 50px !important;
+      font-size: 4rem !important;
+      text-align: center !important;
+    }
+    .input-contact {
+      max-width: 100vw !important;
+    }
+    .textarea-contact {
+      max-width: 100vw !important;
     }
   }
 }
