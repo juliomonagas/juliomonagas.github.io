@@ -1,0 +1,327 @@
+//Variables
+$title-font: 'Montserrat', sans-serif;
+$body-font: 'Open Sans', sans-serif;
+$title-color: #333333;
+$body-color: #333333;
+$bg-color: #f2f2f2;
+$title-size: 1.8rem;
+
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+//Mixins
+@mixin font ($family,$size,$weight,$color,$align,$lh) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    text-align: $align;
+    line-height: $lh;
+}
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+@mixin border-radius($value) {
+  -moz-border-radius: $value;
+  -webkit--radius: $value;
+  border-radius: $value;
+}
+// Flexbox SASS mixins
+//Flexbox display
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// The 'flex' shorthand
+// - applies to: flex items
+// <positive-number>, initial, auto, or none
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+     -moz-box-flex: $values;
+      -webkit-flex: $values;
+  	  -ms-flex: $values;
+  	      flex: $values;
+}
+
+// Flex Flow Direction
+// - applies to: flex containers
+// row | row-reverse | column | column-reverse
+@mixin flex-direction($direction) {
+  -webkit-flex-direction: $direction;
+     -moz-flex-direction: $direction;
+      -ms-flex-direction: $direction;
+          flex-direction: $direction;
+}
+
+// Flex Line Wrapping
+// - applies to: flex containers
+// nowrap | wrap | wrap-reverse
+@mixin flex-wrap($wrap) {
+  -webkit-flex-wrap: $wrap;
+     -moz-flex-wrap: $wrap;
+      -ms-flex-wrap: $wrap;
+          flex-wrap: $wrap;
+}
+
+// Flex Direction and Wrap
+// - applies to: flex containers
+// <flex-direction> || <flex-wrap>
+@mixin flex-flow($flow) {
+  -webkit-flex-flow: $flow;
+     -moz-flex-flow: $flow;
+      -ms-flex-flow: $flow;
+          flex-flow: $flow;
+}
+
+// Display Order
+// - applies to: flex items
+// <integer>
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+     -moz-box-ordinal-group: $val;
+  	     -ms-flex-order: $val;
+  	      -webkit-order: $val;
+  		      order: $val;
+}
+
+// Flex grow factor
+// - applies to: flex items
+// <number>
+@mixin flex-grow($grow) {
+  -webkit-flex-grow: $grow;
+     -moz-flex-grow: $grow;
+      -ms-flex-grow: $grow;
+          flex-grow: $grow;
+}
+
+// Flex shrink
+// - applies to: flex item shrink factor
+// <number>
+@mixin flex-shrink($shrink) {
+  -webkit-flex-shrink: $shrink;
+     -moz-flex-shrink: $shrink;
+      -ms-flex-shrink: $shrink;
+          flex-shrink: $shrink;
+}
+
+// Flex basis
+// - the initial main size of the flex item
+// - applies to: flex itemsnitial main size of the flex item
+// <width>
+@mixin flex-basis($width) {
+  -webkit-flex-basis: $width;
+     -moz-flex-basis: $width;
+      -ms-flex-basis: $width;
+          flex-basis: $width;
+}
+
+// Axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | space-between | space-around
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+            -ms-flex-pack: $justify;
+}
+
+// Packing Flex Lines
+// - applies to: multi-line flex containers
+// flex-start | flex-end | center | space-between | space-around | stretch
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+     -moz-align-content: $align;
+      -ms-align-content: $align;
+          align-content: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex containers
+// flex-start | flex-end | center | baseline | stretch
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+     -moz-align-items: $align;
+      -ms-align-items: $align;
+          align-items: $align;
+}
+
+// Cross-axis Alignment
+// - applies to: flex items
+// auto | flex-start | flex-end | center | baseline | stretch
+@mixin align-self($align) {
+  -webkit-align-self: $align;
+     -moz-align-self: $align;
+      -ms-align-self: $align;
+          align-self: $align;
+}
+
+/*Mixin Valigner*/
+@mixin middle-valigner() {
+  @include flexbox;
+  @include align-items(center);
+  position: relative;
+}
+
+//SCSS
+
+body {
+  background-color: $bg-color;
+  font-size: 16px;
+  font-family: $body-font;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  *a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
+.no-padd {
+  padding: 0 !important;
+}
+.no-padd-left {
+  padding-left: 0 !important;
+}
+header {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100vh;
+  padding: 2vw;
+  position: relative;
+  @include flexbox;
+  @include flex-direction(column);
+  @include justify-content(flex-end);
+  @include align-items(flex-end);
+  -webkit-font-smoothing: antialiased;
+  .right-container {
+    width: 45%;
+    height: 100%;
+    position: relative;
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(flex-end);
+    @include align-items(flex-start);
+    h1 {
+      text-align: left;
+      color: #333;
+      font-weight: 600;
+      font-family: $title-font;
+      font-size: 8.5rem;
+      width: 95%;
+      margin-top: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    h2 {
+      text-align: left;
+      color: #333;
+      font-weight: 300;
+      font-family: $body-font;
+      font-size: 2.5rem;
+      width: 80%;
+      margin-top: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .button-container {
+      width: 100%;
+      height: 90px;
+      @include flexbox;
+      @include flex-direction(row);
+      @include justify-content(flex-start);
+      @include align-items(center);
+      .button-1 {
+        width: 100%;
+        max-width: 210px;
+        height: 45px;
+        background-color: #333;
+        color: white;
+        font-size: 1.5rem;
+        font-family: $title-font;
+        font-weight: 600;
+        text-align: center;
+        border-radius: 300px;
+        text-transform: uppercase;
+        @include flexbox;
+        @include flex-direction(row);
+        @include justify-content(center);
+        @include align-items(center);
+        -webkit-font-smoothing: antialiased;
+        transition: all ease-in-out 300ms;
+        &:hover {
+          background-color: darkred;
+          text-decoration: none !important;
+        }
+      }
+    }
+    ul.social-list {
+      width: 100%;
+      height: 50px;
+      margin-left: 0px;
+      padding-left: 0px;
+      @include flexbox;
+      @include flex-direction(row);
+      @include justify-content(flex-start);
+      @include align-items(center);
+      li {
+        margin-right: 40px;
+        @include flexbox;
+        i {
+          color: #333;
+          font-size: 2.2rem;
+          transition: all ease-in-out 300ms;
+          -webkit-font-smoothing: antialiased;
+          &:hover {
+            color: darkred;
+          }
+        }
+      }
+    }
+  }
+}
+section.about {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 2vw;
+  position: relative;
+  display: block;
+  .section-content {
+    width: 100%;
+    max-width: 1180px;
+    margin: 2vw auto;
+    position: relative;
+    display: block;
+  }
+  h1.title-section {
+    text-align: left;
+    color: #333;
+    font-weight: 600;
+    font-family: $title-font;
+    font-size: 6rem;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    -webkit-font-smoothing: antialiased;
+  }
+  p {
+    font-family: $body-font;
+    color: #707070;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 25px;
+  }
+}
