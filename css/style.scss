@@ -181,7 +181,7 @@ body {
   font-family: $body-font;
   color: #333;
   -webkit-font-smoothing: antialiased;
-  *a {
+  a {
     text-decoration: none;
     &:hover {
       text-decoration: none !important;
@@ -365,7 +365,7 @@ section.portfolio {
     @include flex-wrap(wrap);
     .project-container {
       width: 25%;
-      height: 40vh;
+      height: 45vh;
       @include flexbox;
       @include flex-direction(column);
       @include justify-content(center);
