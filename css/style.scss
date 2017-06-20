@@ -579,7 +579,7 @@ footer {
   padding: 1vw;
   position: relative;
   display: block;
-  background-color: #707070;
+  background-color: #333;
   @include flexbox;
   @include justify-content(space-between);
   @include align-items(center);
@@ -588,7 +588,7 @@ footer {
     width: 50%;
     font-weight: 400;
     font-family: $title-font;
-    color: #333;
+    color: #FFF;
     text-align: left;
     margin-bottom: 0 !important;
   }
@@ -609,12 +609,12 @@ footer {
         margin-right: 0px !important;
       }
       i {
-        color: #333;
+        color: #FFF;
         font-size: 2.2rem;
         transition: all ease-in-out 300ms;
         -webkit-font-smoothing: antialiased;
         &:hover {
-          color: white;
+          color: #FFF;
         }
       }
     }
