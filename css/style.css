@@ -282,8 +282,9 @@ section.about ul.hobbies-list li {
 }
 
 section.about ul.hobbies-list li img.hobbies-icon {
-  width: 60px;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  max-width: 60px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;

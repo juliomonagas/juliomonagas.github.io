@@ -344,8 +344,9 @@ section.about {
     li {
       margin-right: 50px;
       img.hobbies-icon {
-        width: 60px;
-        height: auto;
+        width: 100%;
+        height: 100%;
+        max-width: 60px;
         @include flexbox;
         @include justify-content(center);
       }
